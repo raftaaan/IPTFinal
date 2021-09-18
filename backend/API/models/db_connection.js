@@ -3,7 +3,7 @@ const mysql = require('mysql')
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    database: "api_db"
+    database: "coolpals_db"
 })
 
 db.connect((error)=>{
