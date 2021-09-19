@@ -10,5 +10,5 @@ const port = 8000;
 //code for creating own Server
 
 server.listen(port, ()=> {
-    console.log('Listening to port ${port}')
+    console.log(`Listening to port:${port}`)
 })

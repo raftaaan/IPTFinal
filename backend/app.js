@@ -24,6 +24,10 @@ app.use((req, res, next)=>{
     next()
 })
 
+app.get('/', (req, res) => {
+    res.send('you just hit the home page\n')
+  })
+
 app.use('/users', userRouter);
 
 app.use((err, req, res, next)=>{
