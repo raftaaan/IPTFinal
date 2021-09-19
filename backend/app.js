@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 const userRouter = require('./API/routers/user_router');
+const productRouter = require('./API/routers/product_router')
 
 app.use((req, res, next)=>{
 
@@ -29,6 +30,8 @@ app.get('/', (req, res) => {
   })
 
 app.use('/users', userRouter);
+app.use('/products', productRouter);
+
 
 app.use((err, req, res, next)=>{
     res.status(err.status || 500);
